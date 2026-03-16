@@ -242,25 +242,19 @@
 
         // IMPORTANT: No “essay”, no “paragraph” hardcoded.
         // The model is instructed to infer what it is from the assignment file.
-     const query = [
-  "db2025",
-  "Output plain text only. If you use bullets, use hyphens like '- ' only. No Markdown headings or bold.",
 
-          "Use ONLY the syllabus and assignment text below to decide what kind of submission this is and how to evaluate it.",
-          "Do not assume it is an essay unless the assignment says it is an essay.",
-        "Do NOT include any grades, scores, percentages, points, or numeric evaluation anywhere.",
-      "Do NOT write 'Grade:' or 'Score:' or any numbers meant as evaluation.",
-      "Match the format required by the ASSIGNMENT file. If it requires short margin notes, do that. If it requires substantive engagement, do that.",
-
-          "",
-          "Reviewer Comments (authoritative):",
-          reviewerComments,
-          "",
-          "Student Submission (as provided):",
-          submissionText,
-          "",
-          "Return structured feedback using the categories/rubric described in the assignment file. If the assignment file does not define categories, use the six db2025 categories.",
-        ].join("\n");
+    const query = [
+        "TASK:",
+        "Evaluate the submission using the assignment framework and course syllabus provided in the system instructions.",
+        "Use the reviewer comments as authoritative observations when evaluating the submission.",
+        "",
+        "REVIEWER COMMENTS:",
+        reviewerComments || "[No reviewer comments provided]",
+        "",
+        "STUDENT SUBMISSION:",
+        submissionText || "[No submission text provided]",
+        "",
+    ].join("\n");
 
         const res = await fetch("https://feedback2026.deno.dev/", {
           method: "POST",
