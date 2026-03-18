@@ -1,3 +1,5 @@
+Treat reviewer comments as authoritative guidance about the submission. Use reviewer comments to guide your evaluation.
+
 **Political Science 3201 -- International Law**
 
 ## Land Acknowledgement

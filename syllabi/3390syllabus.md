@@ -1,3 +1,5 @@
+Treat reviewer comments as authoritative guidance about the submission. Use reviewer comments to guide your evaluation.
+
 Feedback Instruction Set (for ChatGPT-4.0 Mini)
 General Rules
 
