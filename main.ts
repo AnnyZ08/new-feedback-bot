@@ -98,6 +98,14 @@ serve(async (req: Request): Promise<Response> => {
     ${body.query || "[No query provided]"}
     END TASKS
 
+    REVIEWER COMMENTS
+    ${reviewerComments || "[No comment provided]"}
+    END REVIEWER COMMENTS
+
+    STUDENT SUBMISSION
+    ${submissionText || "[No submission provided]"}
+    END STUDENT SUBMISSION
+
     COURSE SYLLABUS
     ${syllabus || "[No syllabus text provided]"}
     END COURSE SYLLABUS
@@ -106,13 +114,6 @@ serve(async (req: Request): Promise<Response> => {
     ${assessment || "[No assignment text provided]"}
     END ASSIGNMENT FRAMEWORK
 
-    REVIEWER COMMENTS
-    ${reviewerComments || "[No comment provided]"}
-    END REVIEWER COMMENTS
-
-    STUDENT SUBMISSION
-    ${submissionText || "[No submission provided]"}
-    END STUDENT SUBMISSION
   `;
 
   const messages = [
