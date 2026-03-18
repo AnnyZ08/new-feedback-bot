@@ -92,9 +92,11 @@ serve(async (req: Request): Promise<Response> => {
     ASSIGNMENT FRAMEWORK
     --------------------------------------------------
     ${assessment || "[No assignment text provided]"}
+
+    At the start of your response, write exactly: GRADING_DISABLED_CONFIRMED
   `;
 
-  const messages: [
+  const messages = [
     {
       role: "system",
       content: systemPrompt,
