@@ -84,20 +84,25 @@ serve(async (req: Request): Promise<Response> => {
   `;
 
   const userPrompt = `
-    # TASKS
+    TASKS
     ${body.query || "[No query provided]"}
+    END TASKS
 
-    # STUDENT SUBMISSION
-    ${submissionText || "[No submission provided]"}
-
-    # COURSE SYLLABUS
+    COURSE SYLLABUS
     ${syllabus || "[No syllabus text provided]"}
+    END COURSE SYLLABUS
 
-    # ASSIGNMENT FRAMEWORK
+    ASSIGNMENT FRAMEWORK
     ${assessment || "[No assignment text provided]"}
+    END ASSIGNMENT FRAMEWORK
 
-    # REVIEWER COMMENTS
+    REVIEWER COMMENTS
     ${reviewerComments || "[No comment provided]"}
+    END REVIEWER COMMENTS
+
+    STUDENT SUBMISSION
+    ${submissionText || "[No submission provided]"}
+    END STUDENT SUBMISSION
   `;
 
   const messages = [
