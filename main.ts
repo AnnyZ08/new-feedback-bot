@@ -56,6 +56,7 @@ serve(async (req: Request): Promise<Response> => {
 
   // Assignment should come from the web page (do NOT force local file lookup)
   const assessment = body.assessment ?? "";
+  const reviewerComments = body.reviewerComments ?? "";
 
     const systemPrompt = `
     DEBUG MODE:
@@ -92,6 +93,11 @@ serve(async (req: Request): Promise<Response> => {
     ASSIGNMENT FRAMEWORK
     --------------------------------------------------
     ${assessment || "[No assignment text provided]"}
+
+    --------------------------------------------------
+    COURSE SYLLABUS
+    --------------------------------------------------
+    ${reviewerComments || "[No comment provided]"}
 
     At the start of your response, write exactly: GRADING_DISABLED_CONFIRMED
   `;
