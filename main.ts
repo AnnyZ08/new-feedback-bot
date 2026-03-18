@@ -86,14 +86,6 @@ serve(async (req: Request): Promise<Response> => {
     ${submissionText || "[No submission provided]"}
     END STUDENT SUBMISSION
 
-    COURSE SYLLABUS
-    ${syllabus || "[No syllabus text provided]"}
-    END COURSE SYLLABUS
-
-    ASSIGNMENT FRAMEWORK
-    ${assessment || "[No assignment text provided]"}
-    END ASSIGNMENT FRAMEWORK
-
   `;
 
   const messages = [
