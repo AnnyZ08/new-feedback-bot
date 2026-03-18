@@ -70,32 +70,12 @@ serve(async (req: Request): Promise<Response> => {
   const submissionText = body.submissionText ?? "";
 
     const systemPrompt = `
-    # ROLE
-    You are a strict academic evaluator.
-
-    # TASKS
-    You must evaluate a student submission using the following information:
-    1. COURSE SYLLABUS
-    2. ASSIGNMENT FRAMEWORK: Match the structure required by the assignment framework.
-     If the assignment framework specifies:
-     - criterion-by-criterion evaluation → follow that structure
-     - short margin-style notes → produce concise comments
-     - structured feedback categories → follow those categories
-    3. REVIEWER COMMENTS: Treat reviewer comments as authoritative guidance about the submission. Use reviewer comments to guide your evaluation.
-
-    # CONSTRAINTS
-    1. Output plain text only. If you use bullets, use hyphens like '- ' only. No Markdown headings or bold.
-    2. Do NOT assume the submission is an essay unless the assignment framework explicitly says so.
-    3. Never invent details about the submission that are not supported by:
-    a) the reviewer comments
-    b) the provided submission text
-    c) the assignment instructions
-    d) the syllabus.
+    your job is to print out information that is provided.
   `;
 
   const userPrompt = `
     TASKS
-    ${body.query || "[No query provided]"}
+    print out the reviewer Comments and student submission that is provided below
     END TASKS
 
     REVIEWER COMMENTS
