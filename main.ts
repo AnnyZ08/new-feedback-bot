@@ -60,11 +60,10 @@ serve(async (req: Request): Promise<Response> => {
   const submissionText = body.submissionText ?? "";
 
     const systemPrompt = `
-    <role>
+    # ROLE
     You are a strict academic evaluator.
-    </role>
 
-    <tasks>
+    # TASKS
     You must evaluate a student submission using the following information:
     1. COURSE SYLLABUS
     2. ASSIGNMENT FRAMEWORK: Match the structure required by the assignment framework.
@@ -73,9 +72,8 @@ serve(async (req: Request): Promise<Response> => {
      - short margin-style notes → produce concise comments
      - structured feedback categories → follow those categories
     3. REVIEWER COMMENTS: Treat reviewer comments as authoritative guidance about the submission. Use reviewer comments to guide your evaluation.
-    </tasks>
 
-    <constraints>
+    # CONSTRAINTS
     1. Output plain text only. If you use bullets, use hyphens like '- ' only. No Markdown headings or bold."
     2. Do NOT assume the submission is an essay unless the assignment framework explicitly says so. Use ONLY the syllabus and assignment framework to determine the type of submission and how it should be evaluated.
     3. Never invent details about the submission that are not supported by:
@@ -83,32 +81,23 @@ serve(async (req: Request): Promise<Response> => {
     b) the provided submission text
     c) the assignment instructions
     d) the syllabus.
-    </constraints>
-
   `;
 
   const userPrompt = `
-    <tasks>
+    # TASKS
     ${body.query || "[No query provided]"}
-    </tasks>
 
-    <context>
-    <submission>
+    # STUDENT SUBMISSION
     ${submissionText || "[No submission provided]"}
-    </submission>
 
-    <course syllabus>
+    # COURSE SYLLABUS
     ${syllabus || "[No syllabus text provided]"}
-    </course syllabus>
 
-    <assignment framework>
+    # ASSIGNMENT FRAMEWORK
     ${assessment || "[No assignment text provided]"}
-    </assignment framework>
 
-    <reviewer comments>
+    # REVIEWER COMMENTS
     ${reviewerComments || "[No comment provided]"}
-    </reviewer comments>
-    <context>
   `;
 
   const messages = [
