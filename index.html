@@ -245,12 +245,8 @@
 
     const query = [
         "At the start of your response, write exactly: QUERY_CONFIRMED.",
-        "TASK:",
         "Evaluate the submission using the reviewer comments, assignment framework and course syllabus provided in the system instructions.",
-        "Use the reviewer comments as the most important authoritative observations when evaluating the submission.",
-        "",
-        "STUDENT SUBMISSION:",
-        submissionText || "[No submission text provided]",
+        "Use the reviewer comments as the authoritative observations when evaluating the submission.",
         "",
     ].join("\n");
 
@@ -261,6 +257,7 @@
             course,
             query,
             reviewerComments,
+            submissionText,
             syllabus: syllabusContent,
             assessment: assessmentContent,
           }),

@@ -57,13 +57,14 @@ serve(async (req: Request): Promise<Response> => {
   // Assignment should come from the web page (do NOT force local file lookup)
   const assessment = body.assessment ?? "";
   const reviewerComments = body.reviewerComments ?? "";
+  const submissionText = body.submissionText ?? "";
 
     const systemPrompt = `
-    DEBUG MODE:
-    At the start of your response, write exactly: GRADING_DISABLED_CONFIRMED
-
+    <role>
     You are a strict academic evaluator.
+    </role>
 
+    <tasks>
     You must evaluate a student submission using the following information:
     1. COURSE SYLLABUS
     2. ASSIGNMENT FRAMEWORK: Match the structure required by the assignment framework.
@@ -72,10 +73,9 @@ serve(async (req: Request): Promise<Response> => {
      - short margin-style notes → produce concise comments
      - structured feedback categories → follow those categories
     3. REVIEWER COMMENTS: Treat reviewer comments as authoritative guidance about the submission. Use reviewer comments to guide your evaluation.
+    </tasks>
 
-    --------------------------------------------------
-    EVALUATION RULE
-    --------------------------------------------------
+    <constraints>
     1. Output plain text only. If you use bullets, use hyphens like '- ' only. No Markdown headings or bold."
     2. Do NOT assume the submission is an essay unless the assignment framework explicitly says so. Use ONLY the syllabus and assignment framework to determine the type of submission and how it should be evaluated.
     3. Never invent details about the submission that are not supported by:
@@ -83,23 +83,32 @@ serve(async (req: Request): Promise<Response> => {
     b) the provided submission text
     c) the assignment instructions
     d) the syllabus.
+    </constraints>
 
-    --------------------------------------------------
-    COURSE SYLLABUS
-    --------------------------------------------------
+  `;
+
+  const userPrompt = `
+    <tasks>
+    ${body.query || "[No query provided]"}
+    </tasks>
+
+    <context>
+    <submission>
+    ${submissionText || "[No submission provided]"}
+    </submission>
+
+    <course syllabus>
     ${syllabus || "[No syllabus text provided]"}
+    </course syllabus>
 
-    --------------------------------------------------
-    ASSIGNMENT FRAMEWORK
-    --------------------------------------------------
+    <assignment framework>
     ${assessment || "[No assignment text provided]"}
+    </assignment framework>
 
-    --------------------------------------------------
-    COURSE SYLLABUS
-    --------------------------------------------------
+    <reviewer comments>
     ${reviewerComments || "[No comment provided]"}
-
-    At the start of your response, write exactly: GRADING_DISABLED_CONFIRMED
+    </reviewer comments>
+    <context>
   `;
 
   const messages = [
@@ -109,7 +118,7 @@ serve(async (req: Request): Promise<Response> => {
     },
     {
       role: "user",
-      content: body.query,
+      content: userPrompt,
     },
   ];
 
