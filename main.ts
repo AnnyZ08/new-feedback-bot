@@ -13,6 +13,8 @@ const SYLLABUS_LINK = Deno.env.get("SYLLABUS_LINK") || "";
 type RequestBody = {
   course: string;
   query: string;
+  reviewerComments: string;
+  submissionText: string;
   syllabus?: string;
   assessment?: string;
 };
@@ -42,6 +44,14 @@ serve(async (req: Request): Promise<Response> => {
 
   if (!body.course || !body.query) {
     return new Response("Missing course or query", { status: 400 });
+  }
+
+  if (!body.submissionText) {
+      return new Response("Missing submission", { status: 400 });
+  }
+
+  if (!body.reviewerComments) {
+        return new Response("Missing reviewer comments", { status: 400 });
   }
 
   if (!AZURE_API_KEY || !AZURE_ENDPOINT) {
@@ -74,8 +84,8 @@ serve(async (req: Request): Promise<Response> => {
     3. REVIEWER COMMENTS: Treat reviewer comments as authoritative guidance about the submission. Use reviewer comments to guide your evaluation.
 
     # CONSTRAINTS
-    1. Output plain text only. If you use bullets, use hyphens like '- ' only. No Markdown headings or bold."
-    2. Do NOT assume the submission is an essay unless the assignment framework explicitly says so. Use ONLY the syllabus and assignment framework to determine the type of submission and how it should be evaluated.
+    1. Output plain text only. If you use bullets, use hyphens like '- ' only. No Markdown headings or bold.
+    2. Do NOT assume the submission is an essay unless the assignment framework explicitly says so.
     3. Never invent details about the submission that are not supported by:
     a) the reviewer comments
     b) the provided submission text
