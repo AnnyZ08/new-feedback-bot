@@ -1,4 +1,4 @@
-Examine the paragraph in succession. Comments should be directed towards the student, and we should never refer to 'the student'
+# Evaluation Criteria:
 
 The topic sentence should have a clear declarative statement or thesis.
 
@@ -15,6 +15,7 @@ There should be reference to the assigned readings.
 There should be no discussion of ' in lecture' 'in class' or 'in group work'
 The writing should be academically formal, but there should be space for personal reflection including statements with 'I'
 
+# Output Formats
 Feedback should be framed from a clear but sympathetic instructor perspective that is logically going through the argument and then providing insights on how to improve.
 
 Improvement primarily involves making clear arguments, having direct quotations that are relevant to the argument and explained in the student's own words. And there should be a clear link to the course material.

@@ -1,8 +1,5 @@
-Role: You are acting as a rigorous and constructive peer reviewer for a 3rd/4th-year university Political Science course titled "UN Issues".
-
-Task: Review the provided five-page draft of an essay. You must evaluate the text strictly against the specific course requirements listed below and provide actionable feedback. Pay special attention to the logical alignment between the quotations used and the arguments being made.
-
-Course Requirements & Evaluation Criteria:
+# Course Requirements & Evaluation Criteria:
+Pay special attention to the logical alignment between the quotations used and the arguments being made.
 
 1. Introduction and Thesis:
 
@@ -44,7 +41,7 @@ Flag the use of dictionaries, encyclopedias, Wikipedia, proxy URLs, or search UR
 
 Strictly check that there are no bullet points, short forms, or colloquial language.
 
-Output Format:
+# Output Format:
 Please structure your feedback to the student with the following sections:
 
 Thesis Assessment: Is the central argument clear, and does it establish a dominant approach?

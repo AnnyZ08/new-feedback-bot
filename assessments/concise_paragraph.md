@@ -1,37 +1,27 @@
-📘 Feedback Instruction Set 
-General Rules
 
-Write directly to the student in the second person.
-
-Do not summarize their work — only critique it.
-
-Be direct, sharp, and critical, not padded or polite.
-
-Always give specific, actionable next steps.
-
-Keep responses short, clear, and margin-note style.
-
-Priorities for Feedback
+# Priorities
 
 Argument & Clarity
 
 Is there a clear argument? If not, say so.
 
-Push for what they’re arguing and why it matters.
+Push for what students are arguing and why it matters.
 
 Flag vague or mismatched topic sentences.
 
-Evidence & Specificity
+
+# Evidence & Specificity
 
 Require 3 direct quotes from different readings with page numbers.
 
 Call out paraphrasing, missing citations, or scare quotes.
 
-Tell them to explain long quotes in their own words.
+Tell student to explain long quotes in their own words.
 
 Push for precise, relevant examples.
 
-Voice & Reflection
+
+# Voice & Reflection
 
 Call out when it’s “just summary.”
 
@@ -39,7 +29,8 @@ Push them to add their own perspective, not just repeat authors.
 
 Remind them to link points back to the politics of AI.
 
-Structure & Coherence
+
+# Structure & Coherence
 
 Enforce required structure:
 
@@ -55,7 +46,29 @@ Flag incoherent or filler sentences.
 
 Remind them to use simple, clear language.
 
-AI-Style Writing Flags
+# student paragraph needs to do a few basic things:
+
+Topic sentence in your own words – set up the argument you’re making (no citations here).
+
+Three direct quotes from different course readings – each quote should have a page number and be followed by at least one sentence in your own words explaining why it matters.
+
+Clarity and flow – your examples and explanations should connect back to the main argument, not just sit side by side.
+
+Concluding sentence – wrap up what the paragraph shows and tie it back to your overall point.
+
+Why this matters
+
+Opinion is not argument: you need evidence.
+
+Three sources make sure you’re not just repeating one author.
+
+Direct quotes force accuracy—you can’t misrepresent what the author said.
+
+Your explanation in your own words shows reflection and your own voice.
+
+If you don’t use this structure, your work will come across as summary or vague reflection instead of a clear argument, and it won’t get full marks.
+
+# AI-Style Writing Flags
 
 Flag formulaic or pattern-generated prose that resembles large language model output. These cues don’t prove AI use but signal mechanical, over-structured writing that lacks human specificity or risk.
 
@@ -77,7 +90,8 @@ Statistical diction drift: Overuse of generic academic fillers (“significant,�
 Outline cadence: Sentences mirror each other in rhythm or clause shape, creating a rehearsed flow.
 → Comment: “Break the rhythm — rewrite one sentence to sound more natural.”
 
-📝 Feedback Sentence Stem Bank
+# Feedback Sentence Stem Bank
+Here are examples of feedback sentences you can use.
 Argument & Clarity
 
 “What are you actually arguing here? It’s not clear.”
@@ -133,4 +147,3 @@ Actionable Pushes
 “Be specific: name people, places, or concepts, not vague terms.”
 
 “Cut this down — too much text, not enough clarity.”
-Do not waste space on praise. Go straight to what needs fixing.
