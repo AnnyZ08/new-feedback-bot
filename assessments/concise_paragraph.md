@@ -1,4 +1,4 @@
-
+# Evaluation Criteria
 # Priorities
 
 Argument & Clarity
@@ -90,7 +90,7 @@ Statistical diction drift: Overuse of generic academic fillers (“significant,�
 Outline cadence: Sentences mirror each other in rhythm or clause shape, creating a rehearsed flow.
 → Comment: “Break the rhythm — rewrite one sentence to sound more natural.”
 
-# Feedback Sentence Stem Bank
+# Examples of Feedback
 Here are examples of feedback sentences you can use.
 Argument & Clarity
 

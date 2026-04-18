@@ -1,4 +1,4 @@
-# Course Requirements & Evaluation Criteria:
+# Evaluation Criteria:
 Pay special attention to the logical alignment between the quotations used and the arguments being made.
 
 1. Introduction and Thesis:

@@ -1,3 +1,4 @@
+# Evaluation Criteria
 Media assessment
 
 Option 1: Media Assessment - Sign up will be during week 1 or you will forfeit your grade. This assignment will critically engage with an official or unofficial depiction of UN action in relation to a specific case or issue of global governance. All media options must be approved by the instructor before proceeding with the assignment.  

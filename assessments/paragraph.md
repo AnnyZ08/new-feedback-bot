@@ -16,6 +16,7 @@ Updated API Instruction Set for Automated Essay Evaluation (AEE)
 - Do not generate, rewrite, or complete any missing parts of the paragraph. Only analyze the given text as-is.  
 - The system must evaluate all criteria before returning a response.  
 
+# Evaluation Criteria
 Assess Political Stance & Argumentation  
 - Criterion: Strong Political Stance → If the topic sentence makes a direct claim without hedging, apply this label.  
   - Must explicitly argue for a specific position.  
@@ -78,6 +79,7 @@ Weasel words are vague or hedging expressions that reduce argumentative clarity.
 - 2–3 discouraged terms → apply "Some Imprecise Language"
 - 4 or more discouraged terms → apply "Frequently Imprecise Language"
 
+# Examples of Feedback
 Example output:
 "Frequently Imprecise Language: This paragraph includes 6 discouraged expressions, which weakens argumentative clarity."
 
@@ -90,7 +92,7 @@ Force Full Evaluation of All Criteria
 - If any key element is missing (political voice, critical reflection, citation depth, quotation integration), it must be flagged even if the paragraph is structurally sound.  
 - If a paragraph meets structural requirements but lacks depth in analysis, it must not receive A-grade status.  
 
-Output Format (With Specific Examples)  
+# Output Format (With Specific Examples)  
 - The system must return a plain text list with each criterion followed by its justification.  
 - Each response must reference a specific phrase or citation from the paragraph.  
 - Example correct output:  

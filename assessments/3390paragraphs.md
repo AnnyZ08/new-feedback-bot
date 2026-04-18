@@ -17,6 +17,7 @@ Push for what students are arguing and why it matters.
 Flag vague or mismatched topic sentences.
 
 
+# Evaluation Criteria
 # Evidence & Specificity
 
 Require 3 direct quotes from different readings with page numbers.

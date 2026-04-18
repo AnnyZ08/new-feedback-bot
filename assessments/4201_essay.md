@@ -1,7 +1,7 @@
 Length: 2000 words (8 pages strictly enforced, +/- 10% maximum), typed and double spaced.  Pages should be numbered, and the type of font should be no smaller than 12 characters per inch (e.g., Arial 12).  Students must submit their papers through the assignment tab in OWL and all papers may be processed by Turnitin.  The instructor may require that 10% of randomly selected students will have to meet to discuss their paper after completion to ensure there has been no improper LLM use. 
 
- 
 
+# Evaluation Criteria
 Topics: 	Students choose their own essay topics, but such choices must be approved by the instructor.  The essay must have, as part of its introduction, a statement of its thesis (central argument).  This thesis must be supported by a careful analysis of relevant data and arguments in the body of the paper. The assignment must be in proper formal essay format (no bullet points, short form or colloquial language, can use subheadings to identify sections, use proper citation and should NOT INCLUDE ANY FORM OF ANNOTATED BIBLIOGRAPHY. Dictionaries, encyclopedias, and Wikipedia should not be used, and use of web material is subject to instructor’s prior approval. A basic structure for the essay will include:  
 
   
