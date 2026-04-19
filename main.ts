@@ -43,18 +43,22 @@ serve(async (req: Request): Promise<Response> => {
   }
 
   if (!body.course || !body.query) {
+    console.log("Missing course or query");
     return new Response("Missing course or query", { status: 400 });
   }
 
   if (!body.submissionText) {
+      console.log("Missing submission");
       return new Response("Missing submission", { status: 400 });
   }
 
   if (!body.reviewerComments) {
-        return new Response("Missing reviewer comments", { status: 400 });
+       console.log("Missing comments");
+       return new Response("Missing reviewer comments", { status: 400 });
   }
 
   if (!AZURE_API_KEY || !AZURE_ENDPOINT) {
+    console.log("Missing Azure configuration");
     return new Response("Missing Azure configuration", { status: 500 });
   }
 
@@ -143,7 +147,7 @@ serve(async (req: Request): Promise<Response> => {
     body: JSON.stringify({
       messages,
       temperature: 0.2,
-      max_tokens: 2000
+      max_completion_tokens: 2000
     }),
   });
 
